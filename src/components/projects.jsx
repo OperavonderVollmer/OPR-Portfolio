@@ -58,8 +58,13 @@ function Projects() {
   return (
     <div className="projects" id="projects">
       <h1 className="accent">Projects</h1>
-      <div className="flex flex-row">
-        <button onClick={handlePrevClick}>{"<"}</button>
+      <div className="relative w-full">
+        <button
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-full w-[15vw]"
+          onClick={handlePrevClick}
+        >
+          {"<"}
+        </button>
         <div className="projects-list">
           <Project
             classlist={"previous-project side-project"}
@@ -83,7 +88,12 @@ function Projects() {
             demo={projectData[nextProjectIndex].demo}
           />
         </div>
-        <button onClick={handleNextClick}>{">"}</button>
+        <button
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-full w-[15vw]"
+          onClick={handleNextClick}
+        >
+          {">"}
+        </button>
       </div>
     </div>
   );

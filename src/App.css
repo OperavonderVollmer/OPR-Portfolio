@@ -97,7 +97,7 @@
 }
 
 .fade-in-out-3s {
-  animation: fadeInOut 3s ease-in-out;
+  animation: fadeInOut 3s ease-in-out forwards;
 }
 
 .header {
@@ -143,16 +143,16 @@
       z-index: 1;
     }
     .previous-project {
-      mask-image: linear-gradient(to right, transparent 70%, black 100%);
+      mask-image: linear-gradient(to right, transparent 80%, black 100%);
       -webkit-mask-image: linear-gradient(
         to right,
-        transparent 70%,
+        transparent 80%,
         black 100%
       );
     }
     .next-project {
-      mask-image: linear-gradient(to right, black 0%, transparent 30%);
-      -webkit-mask-image: linear-gradient(to right, black 0%, transparent 30%);
+      mask-image: linear-gradient(to right, black 0%, transparent 20%);
+      -webkit-mask-image: linear-gradient(to right, black 0%, transparent 20%);
     }
   }
   button {
@@ -160,6 +160,10 @@
     transition: background-color 0.2s ease;
     font-size: 2.1vw;
     z-index: 2;
+  }
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
   }
 }
 
@@ -190,3 +194,4 @@
     text-decoration: underline;
   }
 }
+
